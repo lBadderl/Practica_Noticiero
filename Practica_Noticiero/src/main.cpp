@@ -1,9 +1,9 @@
 /** 
- * @file main.cpp
- * @brief Sistema Publicador-Suscriptor.
- * Este archivo inicializa el monitor, crea y ejecuta los hilos del editor 
- * y los lectores, y gestiona la captura de señales del sistema operativo.
- */
+* @file main.cpp
+* @brief Sistema Publicador-Suscriptor.
+* Este archivo inicializa el monitor, crea y ejecuta los hilos del editor 
+* y los lectores, y gestiona la captura de señales del sistema operativo.
+*/
 
 #include <iostream>
 #include <vector>
@@ -21,12 +21,12 @@ SistemaNoticias* ptr_sistema = nullptr; ///< Puntero global utilizado por el man
 mutex mtx_consola;                      ///< Mutex global para evitar condiciones de carrera en la salida estándar.
 
 /** 
- * @brief Manejador de interrupciones del sistema.
- * Función que se ejecuta de manera asíncrona cuando el sistema operativo
- * envía la señal SIGINT (presionar Ctrl+C). Cambia la bandera atómica para
- * iniciar un apagado ordenado.
- * @param signum Número de la señal capturada.
- */
+* @brief Manejador de interrupciones del sistema.
+* Función que se ejecuta de manera asíncrona cuando el sistema operativo
+* envía la señal SIGINT (presionar Ctrl+C). Cambia la bandera atómica para
+* iniciar un apagado ordenado.
+* @param signum Número de la señal capturada.
+*/
 
 void manejador_senial(int signum) {
 	cout << "\n[Sistema] Señal " << signum << " recibida (Ctrl+C). Apagando de forma segura...\n";
