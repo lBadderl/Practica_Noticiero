@@ -1,8 +1,9 @@
-/* @file SistemaNoticias.h
- * @brief Definición de la clase SistemaNoticias para la gestión concurrente de mensajes.
- * Implementa una cola segura para hilos (Thread-Safe Queue) utilizando 
- * mutex y variables de condición para sincronizar la producción y el consumo.
- */
+/** 
+* @file SistemaNoticias.h
+* @brief Definición de la clase SistemaNoticias para la gestión concurrente de mensajes.
+* Implementa una cola segura para hilos (Thread-Safe Queue) utilizando 
+* mutex y variables de condición para sincronizar la producción y el consumo.
+*/
 
 #ifndef SISTEMANOTICIAS_H
 #define SISTEMANOTICIAS_H
@@ -13,8 +14,9 @@
 #include <condition_variable>
 #include <atomic>
 
- /** @brief Variable global atómica para el control seguro del ciclo de vida del programa.
-  */
+ /** 
+ * @brief Variable global atómica para el control seguro del ciclo de vida del programa.
+ */
 extern std::atomic<bool> sistema_activo;
 
 /**
@@ -31,16 +33,16 @@ class SistemaNoticias {
 		std::condition_variable no_vacio;         ///< Variable de condición para bloquear a los consumidores si la cola está vacía.
 	public:
 		/**
-		 * @brief Constructor del Sistema de Noticias.
-		 * @param capacidad Tamaño máximo de noticias que la cola puede almacenar simultáneamente.
-		 */
+		* @brief Constructor del Sistema de Noticias.
+		* @param capacidad Tamaño máximo de noticias que la cola puede almacenar simultáneamente.
+		*/
 		 explicit SistemaNoticias(size_t capacidad);
 		/**
-		 * @brief Inserta una nueva noticia en la cola.
-		 * Bloquea el hilo llamador si la cola ha alcanzado su capacidad máxima, 
-		 * hasta que un lector consuma una noticia o el sistema se desactive.
-		 * @param noticia Cadena de texto con el contenido a publicar.
-		 */
+		* @brief Inserta una nueva noticia en la cola.
+		* Bloquea el hilo llamador si la cola ha alcanzado su capacidad máxima, 
+		* hasta que un lector consuma una noticia o el sistema se desactive.
+		* @param noticia Cadena de texto con el contenido a publicar.
+		*/
 		 void publicar(const std::string& noticia);
 		 /**
 		 * @brief Extrae y lee la noticia más antigua de la cola.
