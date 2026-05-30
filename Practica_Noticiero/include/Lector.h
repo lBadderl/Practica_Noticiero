@@ -1,4 +1,4 @@
-/*
+/**
  * @file Lector.h
  * @brief Definición de la clase Lector que actúa como el hilo Consumidor.
  */
@@ -28,11 +28,10 @@ class Lector {
 	public:
 
 		/**
-		 * 
 		 * @brief Constructor del Lector.
 		 * @param sistema Referencia al monitor del sistema de noticias.
 		 * @param id Número identificador del hilo lector para la salida en consola.
-	         * @param noticias_a_leer Número de noticias que desea extraer.
+	     * @param noticias_a_leer Número de noticias que desea extraer.
 		 */
 		Lector(SistemaNoticias& sistema, int id, int noticias_a_leer);
 		
@@ -40,7 +39,7 @@ class Lector {
 		 * @brief Inicia la ejecución del hilo interno llamando a consumir().
 		 */
 		void ejecutar();
-		/*
+		/**
 		 * @brief Espera a que el hilo del lector termine su ejecución.
 		 */
 		void unir();
