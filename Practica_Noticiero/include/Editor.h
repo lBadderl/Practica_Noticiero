@@ -1,7 +1,7 @@
-/*
+/**
  * @file Editor.h
  * @brief Definición de la clase Editor que actúa como el hilo Productor.
- *  */
+ */
 
 #ifndef EDITOR_H
 #define EDITOR_H
