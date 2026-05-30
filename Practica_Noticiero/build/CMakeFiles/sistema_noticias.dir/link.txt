@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/sistema_noticias.dir/link.d CMakeFiles/sistema_noticias.dir/src/main.cpp.o CMakeFiles/sistema_noticias.dir/src/SistemaNoticias.cpp.o CMakeFiles/sistema_noticias.dir/src/Editor.cpp.o CMakeFiles/sistema_noticias.dir/src/Lector.cpp.o -o sistema_noticias

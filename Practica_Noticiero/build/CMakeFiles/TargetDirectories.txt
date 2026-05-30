@@ -1,0 +1,3 @@
+/home/kali/Programacion_Avanzada/Practica_Noticiero/build/CMakeFiles/sistema_noticias.dir
+/home/kali/Programacion_Avanzada/Practica_Noticiero/build/CMakeFiles/edit_cache.dir
+/home/kali/Programacion_Avanzada/Practica_Noticiero/build/CMakeFiles/rebuild_cache.dir
